@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1779913243445" clover="3.2.0">
-  <project timestamp="1779913243445" name="All files">
+<coverage generated="1779924643873" clover="3.2.0">
+  <project timestamp="1779924643874" name="All files">
     <metrics statements="26" coveredstatements="26" conditionals="3" coveredconditionals="3" methods="10" coveredmethods="10" elements="39" coveredelements="39" complexity="0" loc="26" ncloc="26" packages="1" files="5" classes="5"/>
-    <file name="calculate.ts" path="C:\Users\rafael.ti\Documents\GitHub\RideProfit\Calculadora_teste\Calculator - Base\src\utils\calculate.ts">
+    <file name="calculate.ts" path="C:\Users\rafael_casas\Documents\GitHub\Calculadora_teste\Calculator - Base\src\utils\calculate.ts">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -11,17 +11,17 @@
       <line num="10" count="6" type="stmt"/>
       <line num="12" count="6" type="stmt"/>
     </file>
-    <file name="isDot.ts" path="C:\Users\rafael.ti\Documents\GitHub\RideProfit\Calculadora_teste\Calculator - Base\src\utils\isDot.ts">
+    <file name="isDot.ts" path="C:\Users\rafael_casas\Documents\GitHub\Calculadora_teste\Calculator - Base\src\utils\isDot.ts">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="3" type="stmt"/>
     </file>
-    <file name="isNumber.ts" path="C:\Users\rafael.ti\Documents\GitHub\RideProfit\Calculadora_teste\Calculator - Base\src\utils\isNumber.ts">
+    <file name="isNumber.ts" path="C:\Users\rafael_casas\Documents\GitHub\Calculadora_teste\Calculator - Base\src\utils\isNumber.ts">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="8" type="stmt"/>
     </file>
-    <file name="operations.ts" path="C:\Users\rafael.ti\Documents\GitHub\RideProfit\Calculadora_teste\Calculator - Base\src\utils\operations.ts">
+    <file name="operations.ts" path="C:\Users\rafael_casas\Documents\GitHub\Calculadora_teste\Calculator - Base\src\utils\operations.ts">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <line num="1" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
@@ -37,11 +37,11 @@
       <line num="30" count="1" type="stmt"/>
       <line num="31" count="2" type="stmt"/>
     </file>
-    <file name="removeZeroLeft.ts" path="C:\Users\rafael.ti\Documents\GitHub\RideProfit\Calculadora_teste\Calculator - Base\src\utils\removeZeroLeft.ts">
+    <file name="removeZeroLeft.ts" path="C:\Users\rafael_casas\Documents\GitHub\Calculadora_teste\Calculator - Base\src\utils\removeZeroLeft.ts">
       <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="2" count="4" type="cond" truecount="1" falsecount="0"/>
-      <line num="3" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="2" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
     </file>
   </project>
 </coverage>

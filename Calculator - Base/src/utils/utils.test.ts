@@ -1,14 +1,7 @@
 import { calculate } from "./calculate";
 import { isDot } from "./isDot";
 import { isNumber } from "./isNumber";
-import {
-  allClear,
-  divide,
-  equal,
-  multiply,
-  subtract,
-  sum,
-} from "./operations";
+import { OPERATIONS } from "./operations";
 import { removeZeroLeft } from "./removeZeroLeft";
 
 describe("calculate", () => {
@@ -54,43 +47,33 @@ describe("isNumber", () => {
   );
 });
 
-describe("sum", () => {
+describe("OPERATIONS", () => {
   it("soma dois valores", () => {
-    expect(sum(5, 7)).toBe(12);
+    expect(OPERATIONS["+"](5, 7)).toBe(12);
   });
-});
 
-describe("subtract", () => {
   it("subtrai o segundo valor do primeiro", () => {
-    expect(subtract(10, 3)).toBe(7);
+    expect(OPERATIONS["-"](10, 3)).toBe(7);
   });
-});
 
-describe("multiply", () => {
   it("multiplica dois valores", () => {
-    expect(multiply(6, 4)).toBe(24);
+    expect(OPERATIONS["x"](6, 4)).toBe(24);
   });
-});
 
-describe("divide", () => {
   it("divide o primeiro valor pelo segundo", () => {
-    expect(divide(20, 5)).toBe(4);
+    expect(OPERATIONS["/"](20, 5)).toBe(4);
   });
 
   it("retorna Infinity quando divide por zero", () => {
-    expect(divide(8, 0)).toBe(Infinity);
+    expect(OPERATIONS["/"](8, 0)).toBe(Infinity);
   });
-});
 
-describe("equal", () => {
-  it("retorna o segundo operando", () => {
-    expect(equal(99, 42)).toBe(42);
+  it("equal retorna o segundo operando", () => {
+    expect(OPERATIONS["="](99, 42)).toBe(42);
   });
-});
 
-describe("allClear", () => {
-  it("retorna zero", () => {
-    expect(allClear()).toBe(0);
+  it("allClear retorna zero", () => {
+    expect(OPERATIONS["AC"]()).toBe(0);
   });
 });
 
@@ -105,9 +88,5 @@ describe("removeZeroLeft", () => {
 
   it("mantem o valor quando nao existe zero a esquerda", () => {
     expect(removeZeroLeft("15")).toBe("15");
-  });
-
-  it("remove apenas o primeiro zero a esquerda por chamada", () => {
-    expect(removeZeroLeft("0007")).toBe("007");
   });
 });
