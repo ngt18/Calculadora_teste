@@ -5,7 +5,7 @@ type DisplayProps = {
 export default function Display({ value }: DisplayProps) {
   return (
     <div className="display-container" >
-      <div>{value}</div>
+      <div data-testid="display">{value}</div>
     </div>
   );
 }
