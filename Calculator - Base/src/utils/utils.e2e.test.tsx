@@ -2,8 +2,10 @@ import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
 
+// Atalho para pegar o display da calculadora nos testes
 const getDisplay = () => screen.getByTestId("display");
 
+// Limpa a tela depois de cada teste para evitar interferência entre eles
 afterEach(cleanup);
 
 describe("e2e - Calculadora", () => {
@@ -11,6 +13,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Simula a operação 2 + 3 =
     await user.click(screen.getByRole("button", { name: "2" }));
     await user.click(screen.getByRole("button", { name: "+" }));
     await user.click(screen.getByRole("button", { name: "3" }));
@@ -23,6 +26,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Simula a operação 9 - 4 =
     await user.click(screen.getByRole("button", { name: "9" }));
     await user.click(screen.getByRole("button", { name: "-" }));
     await user.click(screen.getByRole("button", { name: "4" }));
@@ -35,6 +39,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Simula a operação 6 x 7 =
     await user.click(screen.getByRole("button", { name: "6" }));
     await user.click(screen.getByRole("button", { name: "x" }));
     await user.click(screen.getByRole("button", { name: "7" }));
@@ -47,6 +52,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Simula a operação 8 / 2 =
     await user.click(screen.getByRole("button", { name: "8" }));
     await user.click(screen.getByRole("button", { name: "/" }));
     await user.click(screen.getByRole("button", { name: "2" }));
@@ -59,6 +65,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Testa o comportamento do igual sem operação
     await user.click(screen.getByRole("button", { name: "7" }));
     await user.click(screen.getByRole("button", { name: "=" }));
 
@@ -69,6 +76,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Digita um número e depois limpa com AC
     await user.click(screen.getByRole("button", { name: "9" }));
     await user.click(screen.getByRole("button", { name: "9" }));
     await user.click(screen.getByRole("button", { name: "AC" }));
@@ -80,6 +88,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Testa o tratamento de erro ao dividir por zero
     await user.click(screen.getByRole("button", { name: "8" }));
     await user.click(screen.getByRole("button", { name: "/" }));
     await user.click(screen.getByRole("button", { name: "0" }));
@@ -92,6 +101,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Garante que 05 seja mostrado apenas como 5
     await user.click(screen.getByRole("button", { name: "0" }));
     await user.click(screen.getByRole("button", { name: "5" }));
 
@@ -102,6 +112,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Simula a operação com números decimais: 3.14 + 0.5 =
     await user.click(screen.getByRole("button", { name: "3" }));
     await user.click(screen.getByRole("button", { name: "." }));
     await user.click(screen.getByRole("button", { name: "1" }));
@@ -119,6 +130,7 @@ describe("e2e - Calculadora", () => {
     const user = userEvent.setup();
     render(<App />);
 
+    // Troca o operador de + para x antes de digitar o segundo número
     await user.click(screen.getByRole("button", { name: "5" }));
     await user.click(screen.getByRole("button", { name: "+" }));
     await user.click(screen.getByRole("button", { name: "x" }));
